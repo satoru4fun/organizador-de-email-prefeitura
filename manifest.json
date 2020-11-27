@@ -1,0 +1,10 @@
+{
+    "name": "Organizador de Email da PMSP",
+    "version": "1.0",
+    "description": "Organiza os emails do MS OWA da PMSP baseado em regras",
+    "browser_action": {
+   	 "default_title": "Organizador de Email",
+   	 "default_popup": "index.html"
+    },
+    "manifest_version": 2
+}
