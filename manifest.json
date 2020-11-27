@@ -1,10 +1,21 @@
 {
     "name": "Organizador de Email da PMSP",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Organiza os emails do MS OWA da PMSP baseado em regras",
     "browser_action": {
-   	 "default_title": "Organizador de Email",
-   	 "default_popup": "index.html"
+      "default_title": "Organizador de Email",
+      "default_popup": "index.html"
     },
-    "manifest_version": 2
+    "manifest_version": 2,
+    "content_scripts": [{
+      "css": [],
+      "js": [
+        "scripts/helpers.js",
+        "scripts/custom-toolbar.js",
+        "scripts/selecionar-tudo.js",
+        "scripts/main.js"
+      ],
+      "matches": ["*://correioweb.prefeitura.sp.gov.br/exchange/*"],
+      "run_at": "document_end"
+    }]
 }
