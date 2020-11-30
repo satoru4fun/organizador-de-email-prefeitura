@@ -1,16 +1,6 @@
-customToolbarStyles = `
-  .custom-toolbar {
-    background-color: #fafbfc;
-    height: 35px;
-    padding: 5px;
-    width: 100%;
-  } 
-`;
-
-function renderCustomToolbar(iframeViewer, viewerDocument) {
-  addStyleToFrame(customToolbarStyles, iframeViewer);
+function renderCustomToolbar(document) {
   const customToolbar = criarCustomToolbar();
-  const folderBar = viewerDocument.querySelector('table .tblFolderBar');
+  const folderBar = document.querySelector('table .tblFolderBar');
   folderBar.parentNode.insertBefore(customToolbar, folderBar);
   return customToolbar;
 };
