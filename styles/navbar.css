@@ -1,0 +1,42 @@
+body.bdyNavbar {
+  background-color: #f8f9fa;
+  border: 0;
+  border-right: #e9ecef solid 1px;
+  border-left: #e9ecef solid 1px;
+}
+
+body.bdyNavbar td {
+  background-image: none;
+  padding: 8px 16px;
+}
+
+table.nbBg {
+  background-color: #f8f9fa !important;
+}
+
+.bdyNavbar A:link, .bdyNavbar A:visited, .bdyNavbar A:active, .trDlgDesc A:link, .trDlgDesc A:visited, .trDlgDesc A:active {
+  color: #3f6ad8 !important;
+}
+
+table.nbBg td.nbButton:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
+  background-color: #16aaff;
+  border-radius: 10rem;
+  box-sizing: border-box;
+  color: #fff;
+  display: inline-block;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  margin-left: auto !important;
+  min-width: 19px;
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: baseline;
+  white-space: nowrap;
+}

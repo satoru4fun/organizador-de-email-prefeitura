@@ -1,8 +1,20 @@
-const iframeViewer = document.querySelector('frame[name=viewer]');
-iframeViewer.contentWindow.addEventListener("DOMContentLoaded", start, true);
+// Este script é executado para cada iframe existente
+// Dessa forma, é necessário identificar qual o iframe em questão para chamar somente as funções relacionadas
+const currentFrame = window.frameElement?.name;
 
-function start() {
-  const viewerDocument = iframeViewer.contentDocument || iframeViewer.contentWindow.document;
-  customToolbar = renderCustomToolbar(iframeViewer, viewerDocument);
-  renderBotaoSelecionarTudo(customToolbar, viewerDocument);
-};
+// Ações relacionadas ao painel de visualização de e-mails (direita)
+if (currentFrame == 'viewer') {
+  customToolbar = renderCustomToolbar(document);
+  renderBotaoSelecionarTudo(customToolbar, document);
+  clicarCheckbox(document);
+}
+
+// Ações relacionadas ao menu de navegação (esquerda)
+if (currentFrame == 'navbar') {
+  aplicarBadges(document);
+}
+
+// Ajusta os framesets
+if (!currentFrame) {
+  ajustarFramesets(document);
+}
