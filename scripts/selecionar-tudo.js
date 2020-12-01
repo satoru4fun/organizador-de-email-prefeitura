@@ -24,8 +24,8 @@ function toggleBotaoSelecionarTudo(botaoSelecionarTudo) {
 }
 
 function handleSelecionarTudo(event, document) {
-  toggleBotaoSelecionarTudo();
   event.preventDefault();
+  toggleBotaoSelecionarTudo(event.target);
   const checkboxes = document.querySelectorAll('td .List input[type=checkbox]');
   for(let i = 0, n = checkboxes.length; i < n; i++) {
     const row = checkboxes[i].parentNode.parentNode;
