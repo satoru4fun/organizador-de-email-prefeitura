@@ -16,6 +16,9 @@
 .botao-desselecionar-tudo {
   background-color: #616a74;
   border-color: #616a74;
+}
+
+#botao-selecionar-tudo {
   border-radius: .25rem;
   box-shadow: 0 0.125rem 0.625rem rgba(52,58,64,0.4), 0 0.0625rem 0.125rem rgba(52,58,64,0.5);
   color: #fff;
