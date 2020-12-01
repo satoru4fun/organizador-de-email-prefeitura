@@ -13,7 +13,7 @@ function criarBotaoSelecionarTudo() {
   return botaoSelecionarTudo;
 }
 
-function toggleBotaoSelecionarTudo() {
+function toggleBotaoSelecionarTudo(botaoSelecionarTudo) {
   const botaoSelecionarTudo = document.getElementById("botao-selecionar-tudo");
   if(botaoSelecionarTudo.className == "botao-selecionar-tudo") {
     botaoSelecionarTudo.className = "botao-desselecionar-tudo";
