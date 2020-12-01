@@ -14,7 +14,6 @@ function criarBotaoSelecionarTudo() {
 }
 
 function toggleBotaoSelecionarTudo(botaoSelecionarTudo) {
-  const botaoSelecionarTudo = document.getElementById("botao-selecionar-tudo");
   if(botaoSelecionarTudo.className == "botao-selecionar-tudo") {
     botaoSelecionarTudo.className = "botao-desselecionar-tudo";
     botaoSelecionarTudo.innerHTML = 'Desselecionar Tudo';
