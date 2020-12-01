@@ -14,12 +14,11 @@ function criarBotaoSelecionarTudo() {
 }
 
 function toggleBotaoSelecionarTudo(botaoSelecionarTudo) {
-  if(botaoSelecionarTudo.className == "botao-selecionar-tudo") {
-    botaoSelecionarTudo.className = "botao-desselecionar-tudo";
-    botaoSelecionarTudo.innerHTML = 'Desselecionar Tudo';
-  }
-  else {
-    botaoSelecionarTudo.className = "botao-selecionar-tudo";
+  botaoSelecionarTudo.classList.toggle('botao-selecionar-tudo');
+  botaoSelecionarTudo.classList.toggle('botao-desselecionar-tudo');
+  botaoSelecionarTudo.innerHTML = 'Desselecionar Tudo';
+  
+  if (botaoSelecionarTudo.classList.contains('botao-selecionar-tudo')) {
     botaoSelecionarTudo.innerHTML = 'Selecionar Tudo';
   }
 }
