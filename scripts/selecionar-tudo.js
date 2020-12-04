@@ -24,11 +24,12 @@ function toggleBotaoSelecionarTudo(botaoSelecionarTudo) {
 }
 
 function handleSelecionarTudo(event, document) {
+  const acaoSelecionar = event.target.classList.contains('botao-selecionar-tudo');
   event.preventDefault();
   toggleBotaoSelecionarTudo(event.target);
   const checkboxes = document.querySelectorAll('td .List input[type=checkbox]');
   for(let i = 0, n = checkboxes.length; i < n; i++) {
     const row = checkboxes[i].parentNode.parentNode;
-    toggleCheckbox(row, checkboxes[i]);
+    toggleCheckbox(row, checkboxes[i], acaoSelecionar);
   }
 }
