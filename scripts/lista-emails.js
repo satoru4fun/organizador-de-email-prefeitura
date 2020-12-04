@@ -4,13 +4,13 @@ function clicarCheckbox(document) {
     email.addEventListener('click', (e) => {
       const row = e.target.parentNode;
       const checkbox = row.firstChild.firstChild;
-      toggleCheckbox(row, checkbox);
+      toggleCheckbox(row, checkbox, !checkbox.checked);
     });
   });
 }
 
-function toggleCheckbox(row, checkbox) {
-  checkbox.checked = !checkbox.checked;
+function toggleCheckbox(row, checkbox, acaoSelecionar) {
+  checkbox.checked = acaoSelecionar;
   if (checkbox.checked) {
     row.classList.add('vwSelItm');
   } else {
